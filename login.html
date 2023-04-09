@@ -1,0 +1,214 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="login-box">
+      <h2>Login</h2>
+      <form>
+        <div class="user-box">
+          <input type="text" name="" required="">
+          <label>Username</label>
+        </div>
+        <div class="user-box">
+          <input type="password" name="" required="">
+          <label>Password</label>
+        </div>
+        <a href="#">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Submit
+        </a>
+      </form>
+    </div>
+  </body>
+</html>
+
+
+
+css
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+}
+
+.login-box {
+  width: 320px;
+  height: 420px;
+  background: #fff;
+  color: #333;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.login-box h2 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.login-box form {
+  padding: 0 20px;
+  margin-top: 30px;
+}
+
+.login-box form .user-box {
+  position: relative;
+}
+
+.login-box form .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #333;
+  outline: none;
+  background: transparent;
+}
+
+.login-box form .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #333;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.login-box form .user-box input:focus ~ label,
+.login-box form .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #ff652f;
+  font-size: 12px;
+}
+
+.login-box form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+  background-color: #ff652f;
+  border-radius: 50px;
+}
+
+.login-box form a:hover {
+  background: linear-gradient(90deg, #ff652f, #ff8d4d);
+}
+
+.login-box form a span {
+  position: absolute;
+  display: block;
+}
+
+.login-box form a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ff652f);
+  animation: animate1 1s linear infinite;
+}
+
+.login-box form a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #ff652f);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+.login-box form a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #ff652f);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0s;
+}
+
+
+    
+    .login-box form a span:nth-child(4) {
+bottom: -100%;
+left: 0;
+width: 2px;
+height: 100%;
+background: linear-gradient(360deg, transparent, #ff652f);
+animation: animate4 1s linear infinite;
+animation-delay: 0.5s;
+}
+
+@keyframes animate1 {
+0% {
+left: -100%;
+}
+50%,
+100% {
+left: 100%;
+}
+}
+
+@keyframes animate2 {
+0% {
+top: -100%;
+}
+50%,
+100% {
+top: 100%;
+}
+}
+
+@keyframes animate3 {
+0% {
+right: -100%;
+}
+50%,
+100% {
+right: 100%;
+}
+}
+
+@keyframes animate4 {
+0% {
+bottom: -100%;
+}
+50%,
+100% {
+bottom: 100%;
+}
+}
+
